@@ -1,6 +1,26 @@
-.correct{
-
+.quiz{ 
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
 }
-.wrong{ 
-    
+.quizDisp{ 
+    margin: 2%;
+    display: flex;
+    flex-direction: column;
+    h2 { 
+        margin-bottom: 10%;
+        align-self: center;
+    }
+}
+.answersDisp{ 
+    display: flex;
+    justify-content: space-evenly;
+}
+.userInputCont{ 
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
 }

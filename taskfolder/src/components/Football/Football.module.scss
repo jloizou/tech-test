@@ -1,0 +1,22 @@
+.team{ 
+    margin: 5%;
+}
+.teamSect{ 
+    margin: 2%;
+}
+.playerCards{ 
+    display: flex;
+    flex-wrap: wrap;
+    width: 100vw;
+}
+.playerCard{ 
+    border: 1px solid #74c69d;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    margin: 1%;
+}
+.playerName{ 
+    margin: 20%;
+}

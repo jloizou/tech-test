@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import footballArr from "../../containers/data/Footballers"
+import styles from "./Football.module.scss"
 
 const Football = () => {
     let [ defenders, setDefenders ] = useState([])
@@ -38,35 +39,41 @@ const Football = () => {
 
     return (
         <div>
-            <div>
-                <div>
+            <div className={styles.team}>
+                <div className={styles.teamSect}>
+                    <p>Defenders</p>
                     {defenders.map(defender => { 
                         return<p>{defender}</p>
                     })}
                 </div>
-                <div>
+                <div className={styles.teamSect}>
+                    <p>Attackers</p>
                     {attackers.map(attacker => { 
                         return<p>{attacker}</p>
                     })}
                 </div>
-                <div>
+                <div className={styles.teamSect}>
+                    <p>Midfielders</p>
                     {midfielders.map(midfielder => { 
                         return<p>{midfielder}</p>
                     })}
                 </div>
-                <div>
+                <div className={styles.teamSect}>
+                    <p>goalie</p>
                     {goalie.map(goalie => { 
                         return<p>{goalie}</p>
                     })}
                 </div>
             </div>
+            <div className={styles.playerCards}>
             {footballArr.map((player) => { 
-                return  <div>
+                return  <div className={styles.playerCard}>
                             <button onClick={() => handleClick(player)}>Add to team</button>
-                            <p>{player.name}</p>
+                            <p className={styles.playerName}>{player.name}</p>
                             <p>{player.position}</p>
                         </div>
             })}
+            </div>
         </div>
     )
 }
